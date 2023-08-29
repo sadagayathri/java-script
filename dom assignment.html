@@ -1,0 +1,419 @@
+<html>
+    <head></head>
+    <body id="d1">
+        <!--<h1 id="d1"></h1>-->
+        <ul id="a"></ul>
+        <div id="dd"></div><br>
+        <div id="q"></div><br>
+        <div id="q1"></div><br>
+        <div id="q2"></div><br>
+        <div id="q3"></div><br>
+        <div id="q4"></div><br>
+        <script>
+//1.Create one h1 element and put some text into it.
+var x=document.createElement("h1")
+x.innerHTML="Hello DOM World!"
+var y=document.getElementById("d1")
+y.appendChild(x)
+console.log(x)
+//2.Create one h1 element,put some text into it and apply red font color to it.
+x.style.color="red"
+//3.Take an array of names and create a list from it.
+var s=['ramesh','suresh','praveen','gopi','sunil']
+s.forEach(function(values,index,array){
+    var y=document.createElement("li")
+    y.innerHTML=values;
+    var z=document.getElementById("a")
+    z.appendChild(y)
+console.log(values)
+})
+//4.Take an array of numbers and create a list from it.
+var s=[11,12,13,14,15,16,17]
+s.forEach(function(values,index,array){
+    var y=document.createElement("li")
+    y.innerHTML=values;
+    var z=document.getElementById("a")
+    z.appendChild(y)
+console.log(values)
+})
+//5.Take an array of objects and create a table form it.
+var students = [
+                                {
+                                name:'praveen',
+                                gender:'male',
+                                place:'gachibowli',
+                                },
+                                {
+                                name:'dasu',
+                                gender:'male',
+                                place:'kphb'
+                                },
+                                {
+                                name:'swati',
+                                gender:'female',
+                                place:'pune'
+                                },                                
+                            ]
+var a=document.getElementById("dd")
+var b=document.createElement("table")
+b.style.border="1px solid"
+a.appendChild(b)
+   
+var c=document.createElement("tr")   
+var ar=['name','gender','place']
+ar.forEach(function(values){
+     
+    var h=document.createElement("th")
+    h.innerHTML=values
+    h.style.border="1px solid"
+    b.appendChild(c)
+    c.appendChild(h)
+    
+})
+
+
+students.forEach(function(values){
+    var c1=document.createElement("tr")
+    var d=document.createElement("td")
+    d.style.border="1px solid"
+    var d1=document.createElement("td")
+    d1.style.border="1px solid"
+    var d2=document.createElement("td")
+    d2.style.border="1px solid"
+    d.innerHTML=values.name
+    d1.innerHTML=values.gender
+    d2.innerHTML=values.place
+    c1.appendChild(d)
+    c1.appendChild(d1)
+    c1.appendChild(d2)
+    b.appendChild(c1)
+    a.appendChild(b)
+    
+
+})
+
+
+
+ </script>
+ <!--<script>
+ var c=document.createElement("tr")
+ var h=document.createElement("th")
+ h.innerHTML="name"
+ h.style.border="1px solid"
+ var h1=document.createElement("th")
+ h1.innerHTML="gender"
+ h1.style.border="1px solid"
+ var h2=document.createElement("th")
+ h2.innerHTML="place"
+ h2.style.border="1px solid"
+ c.appendChild(h)
+ c.appendChild(h1)
+ c.appendChild(h2)
+ b.appendChild(c)
+</script>-->
+
+<script>
+//8.Generate UI using document object for the given Array of Objects
+var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 10000
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        "city": "bengaluru",
+                        "salary": 20000
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 25000
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        "city": "nalgonda",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "nikhil",
+                        "lastname": "m",
+                        "age": 22,
+                        "gender": "male",
+                        "city": "guntur",
+                        "salary": 2000
+                        },
+                        {
+                        "firstname": "riya",
+                        "lastname": "bhadouria",
+                        "age": 14,
+                        "gender": "female",
+                        "city": "indore",
+                        "salary": 40000
+                        }
+                        ];
+//8.1.Display all the people's data in a table.
+var a=document.getElementById("q")
+var b=document.createElement("table")
+b.style.border="1px solid"
+a.appendChild(b)
+   
+var c=document.createElement("tr")   
+var ar=['firstname','lastname','age','gender','city','salary']
+ar.forEach(function(values){
+     
+    var h=document.createElement("th")
+    h.innerHTML=values
+    h.style.border="1px solid"
+    b.appendChild(c)
+    c.appendChild(h)
+    
+})
+
+
+people.forEach(function(values){
+    var c1=document.createElement("tr")
+    var d=document.createElement("td")
+    d.style.border="1px solid"
+    var d1=document.createElement("td")
+    d1.style.border="1px solid"
+    var d2=document.createElement("td")
+    d2.style.border="1px solid"
+    var d3=document.createElement("td")
+    d3.style.border="1px solid"
+    var d4=document.createElement("td")
+    d4.style.border="1px solid"
+    var d5=document.createElement("td")
+    d5.style.border="1px solid"
+    d.innerHTML=values.firstname
+    d1.innerHTML=values.lastname
+    d2.innerHTML=values.age
+    d3.innerHTML=values.gender
+    d4.innerHTML=values.city
+    d5.innerHTML=values.salary
+    c1.appendChild(d)
+    c1.appendChild(d1)
+    c1.appendChild(d2)
+    c1.appendChild(d3)
+    c1.appendChild(d4)
+    c1.appendChild(d5)
+    b.appendChild(c1)
+    a.appendChild(b)
+    
+
+})
+//8.2.Display all male and female people in two separate tables.
+var a=document.getElementById("q1")
+var b=document.createElement("table")
+b.style.border="1px solid"
+a.appendChild(b)
+   
+var c=document.createElement("tr")   
+var ar=['firstname','lastname','age','gender','city','salary']
+ar.forEach(function(values){
+     
+    var h=document.createElement("th")
+    h.innerHTML=values
+    h.style.border="1px solid"
+    b.appendChild(c)
+    c.appendChild(h)
+    
+})
+
+people.forEach(function(values){
+    if(values.gender==="male"){
+    var c1=document.createElement("tr")
+    var d=document.createElement("td")
+    d.style.border="1px solid"
+    var d1=document.createElement("td")
+    d1.style.border="1px solid"
+    var d2=document.createElement("td")
+    d2.style.border="1px solid"
+    var d3=document.createElement("td")
+    d3.style.border="1px solid"
+    var d4=document.createElement("td")
+    d4.style.border="1px solid"
+    var d5=document.createElement("td")
+    d5.style.border="1px solid"
+    d.innerHTML=values.firstname
+    d1.innerHTML=values.lastname
+    d2.innerHTML=values.age
+    d3.innerHTML=values.gender
+    d4.innerHTML=values.city
+    d5.innerHTML=values.salary
+    c1.appendChild(d)
+    c1.appendChild(d1)
+    c1.appendChild(d2)
+    c1.appendChild(d3)
+    c1.appendChild(d4)
+    c1.appendChild(d5)
+    b.appendChild(c1)
+    a.appendChild(b)
+    }
+})
+
+//
+var a=document.getElementById("q2")
+var b=document.createElement("table")
+b.style.border="1px solid"
+a.appendChild(b)
+
+
+var c=document.createElement("tr")   
+var ar=['firstname','lastname','age','gender','city','salary']
+ar.forEach(function(values){
+     
+var h=document.createElement("th")
+    h.innerHTML=values
+    h.style.border="1px solid"
+    b.appendChild(c)
+    c.appendChild(h)
+    
+})
+
+people.forEach(function(values){
+    if(values.gender==="female"){
+    var c1=document.createElement("tr")
+    var d=document.createElement("td")
+    d.style.border="1px solid"
+    var d1=document.createElement("td")
+    d1.style.border="1px solid"
+    var d2=document.createElement("td")
+    d2.style.border="1px solid"
+    var d3=document.createElement("td")
+    d3.style.border="1px solid"
+    var d4=document.createElement("td")
+    d4.style.border="1px solid"
+    var d5=document.createElement("td")
+    d5.style.border="1px solid"
+    d.innerHTML=values.firstname
+    d1.innerHTML=values.lastname
+    d2.innerHTML=values.age
+    d3.innerHTML=values.gender
+    d4.innerHTML=values.city
+    d5.innerHTML=values.salary
+    c1.appendChild(d)
+    c1.appendChild(d1)
+    c1.appendChild(d2)
+    c1.appendChild(d3)
+    c1.appendChild(d4)
+    c1.appendChild(d5)
+    b.appendChild(c1)
+    a.appendChild(b)
+    }
+})
+//8.3.Display only those people in a table who are having salaries more than 20000.
+var a=document.getElementById("q3")
+var b=document.createElement("table")
+b.style.border="1px solid"
+a.appendChild(b)
+
+
+var c=document.createElement("tr")   
+var ar=['firstname','lastname','age','gender','city','salary']
+ar.forEach(function(values){
+     
+var h=document.createElement("th")
+    h.innerHTML=values
+    h.style.border="1px solid"
+    b.appendChild(c)
+    c.appendChild(h)
+    
+})
+
+people.forEach(function(values){
+    if(values.salary>20000){
+    var c1=document.createElement("tr")
+    var d=document.createElement("td")
+    d.style.border="1px solid"
+    var d1=document.createElement("td")
+    d1.style.border="1px solid"
+    var d2=document.createElement("td")
+    d2.style.border="1px solid"
+    var d3=document.createElement("td")
+    d3.style.border="1px solid"
+    var d4=document.createElement("td")
+    d4.style.border="1px solid"
+    var d5=document.createElement("td")
+    d5.style.border="1px solid"
+    d.innerHTML=values.firstname
+    d1.innerHTML=values.lastname
+    d2.innerHTML=values.age
+    d3.innerHTML=values.gender
+    d4.innerHTML=values.city
+    d5.innerHTML=values.salary
+    c1.appendChild(d)
+    c1.appendChild(d1)
+    c1.appendChild(d2)
+    c1.appendChild(d3)
+    c1.appendChild(d4)
+    c1.appendChild(d5)
+    b.appendChild(c1)
+    a.appendChild(b)
+    }
+})
+//8.4.Display only the male people who are above the age of 25.
+var a=document.getElementById("q4")
+var b=document.createElement("table")
+b.style.border="1px solid"
+a.appendChild(b)
+
+
+var c=document.createElement("tr")   
+var ar=['firstname','lastname','age','gender','city','salary']
+ar.forEach(function(values){
+     
+var h=document.createElement("th")
+    h.innerHTML=values
+    h.style.border="1px solid"
+    b.appendChild(c)
+    c.appendChild(h)
+    
+})
+
+people.forEach(function(values){
+    if(values.gender==="male" && values.age>25){
+    var c1=document.createElement("tr")
+    var d=document.createElement("td")
+    d.style.border="1px solid"
+    var d1=document.createElement("td")
+    d1.style.border="1px solid"
+    var d2=document.createElement("td")
+    d2.style.border="1px solid"
+    var d3=document.createElement("td")
+    d3.style.border="1px solid"
+    var d4=document.createElement("td")
+    d4.style.border="1px solid"
+    var d5=document.createElement("td")
+    d5.style.border="1px solid"
+    d.innerHTML=values.firstname
+    d1.innerHTML=values.lastname
+    d2.innerHTML=values.age
+    d3.innerHTML=values.gender
+    d4.innerHTML=values.city
+    d5.innerHTML=values.salary
+    c1.appendChild(d)
+    c1.appendChild(d1)
+    c1.appendChild(d2)
+    c1.appendChild(d3)
+    c1.appendChild(d4)
+    c1.appendChild(d5)
+    b.appendChild(c1)
+    a.appendChild(b)
+    }
+})
+</script>
+    </body>
+</html>

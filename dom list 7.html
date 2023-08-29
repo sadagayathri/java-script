@@ -1,0 +1,85 @@
+<html>
+    <head></head>
+    <body>
+        <div id="d"></div>
+        <script>
+    var ol=document.createElement("ol")
+    var a1=document.getElementById("d")
+   
+var students = [		
+                        {
+                                        "firstname": "praveen",
+                                        "age": 36,
+                                        "subjects":['angular','nodejs','reactjs','java']
+                                    }, 
+                                    {
+                                        "firstname": "srikanth",
+                                        "age": 32,
+                                        "subjects":['react','mongodb']
+                                    }, 
+                                    {
+                                        "firstname": "pradeep",
+                                        "age": 21,
+                                        "subjects":['express','mongoose','python']
+                                    }
+                            ]
+
+var l1=document.createElement("li")
+var s=document.createElement("ol")
+var l2=document.createElement("li")
+var l3=document.createElement("li")
+var l4=document.createElement("li")
+var l5=document.createElement("li")
+
+    l1.innerHTML=students[0].firstname
+    l2.innerHTML=students[0].subjects[0]
+    l3.innerHTML=students[0].subjects[1]
+    l4.innerHTML=students[0].subjects[2]
+    l5.innerHTML=students[0].subjects[3]
+
+    ol.appendChild(l1)
+    l1.appendChild(s)
+    s.appendChild(l2)
+    l2.appendChild(l3)
+    l2.appendChild(l4)
+    l2.appendChild(l5)
+    a1.appendChild(ol)
+//
+var l1=document.createElement("li")
+var s=document.createElement("ol")
+var l2=document.createElement("li")
+var l3=document.createElement("li")
+
+    l1.innerHTML=students[1].firstname
+    l2.innerHTML=students[1].subjects[0]
+    l3.innerHTML=students[1].subjects[1]
+    
+    ol.appendChild(l1)
+    l1.appendChild(s)
+    s.appendChild(l2)
+    l2.appendChild(l3)
+    a1.appendChild(ol)
+
+//
+var l1=document.createElement("li")
+var s=document.createElement("ol")
+var l2=document.createElement("li")
+var l3=document.createElement("li")
+var l4=document.createElement("li")
+
+    l1.innerHTML=students[0].firstname
+    l2.innerHTML=students[2].subjects[0]
+    l3.innerHTML=students[2].subjects[1]
+    l4.innerHTML=students[2].subjects[2]
+    
+    ol.appendChild(l1)
+    l1.appendChild(s)
+    s.appendChild(l2)
+    l2.appendChild(l3)
+    l2.appendChild(l4)
+    a1.appendChild(ol)
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" onkeyup="abc()" id="i">
+        <ul id="u1"></ul>
+        <script>
+            var u1=document.getElementById("u1")
+            var ar=['apple','aeroplane','ant','banana','bird','bat','cat','crow']
+            
+            var i=document.getElementById("i")
+            function abc(){
+               var s=i.value
+                var n=ar.filter(function(a,i){
+                    return (a.startswith(s));
+                    ghc()
+            })
+
+            }
+            function ghc(){
+                ar.forEach(function(v,i){
+                var y=document.createElement("li")
+                y.innerHTML=ar[i]
+                u1.appendChild(y)
+
+            })
+        }
+        ghc()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,290 @@
+<html>
+    <head></head>
+    <body>
+        <div id="q"></div><br>
+        <div id="q1"></div><br>
+        <div id="q2"></div><br>
+        <div id="q3"></div><br>
+        <div id="q4"></div><br>
+        <script>
+var products = [
+			{
+				"name": "Duracell - AAA Batteries (4-Pack)",
+				"type": "HardGood",
+				"price": 5.49,
+				"category": "Household Batteries",
+				"manufacturer": "Duracell",				
+			},
+			{
+				"name": "Hard Rock TrackPak - Mac",
+				"type": "Software",
+				"price": 29.99,
+				"category": "Recording Equipment",
+				"manufacturer": "Hal Leonard",				
+			},
+			{
+				"name": "Duracell - AA 1.5V CopperTop Batteries (4-Pack)",
+				"type": "HardGood",
+				"price": 5.62,
+				"category": "Household Batteries",
+				"manufacturer": "Duracell",				
+			},
+			{
+				"name": "Energizer - MAX Batteries AA (4-Pack)",
+				"type": "HardGood",
+				"price": 5.32,
+				"category": "Household Batteries",
+				"manufacturer": "Energizer",				
+			},
+			{
+				"name": "METRA - Antenna Cable Adapter - Black",
+				"type": "HardGood",
+				"price": 13.99,
+				"category": "Antennas & Adapters",
+				"manufacturer": "Metra",				
+			},
+			{
+				"name": "WipeDrive Six - Mac|Windows",
+				"type": "Software",
+				"price": 23.99,
+				"category": "Maintenance Software",
+				"manufacturer": "White Canyon",				
+			}
+		];
+//9.1.Display all the products in a table      
+var a=document.getElementById("q")
+var b=document.createElement("table")
+b.style.border="1px solid"
+a.appendChild(b)
+   
+var c=document.createElement("tr")   
+var ar=['name','type','price','category','manufacturer']
+ar.forEach(function(values){
+     
+    var h=document.createElement("th")
+    h.innerHTML=values
+    h.style.border="1px solid"
+    b.appendChild(c)
+    c.appendChild(h)
+    
+})
+
+
+products.forEach(function(values){
+    var c1=document.createElement("tr")
+    var d=document.createElement("td")
+    d.style.border="1px solid"
+    var d1=document.createElement("td")
+    d1.style.border="1px solid"
+    var d2=document.createElement("td")
+    d2.style.border="1px solid"
+    var d3=document.createElement("td")
+    d3.style.border="1px solid"
+    var d4=document.createElement("td")
+    d4.style.border="1px solid"
+    
+    d.innerHTML=values.name
+    d1.innerHTML=values.type
+    d2.innerHTML=values.price
+    d3.innerHTML=values.category
+    d4.innerHTML=values.manufacturer
+    
+    c1.appendChild(d)
+    c1.appendChild(d1)
+    c1.appendChild(d2)
+    c1.appendChild(d3)
+    c1.appendChild(d4)
+    
+    b.appendChild(c1)
+    a.appendChild(b)
+    
+
+})
+//9.2.Display only the name and price of each product in a table.
+var a=document.getElementById("q1")
+var b=document.createElement("table")
+b.style.border="1px solid"
+a.appendChild(b)
+   
+var c=document.createElement("tr")   
+var ar=['name','price']
+ar.forEach(function(values){
+     
+    var h=document.createElement("th")
+    h.innerHTML=values
+    h.style.border="1px solid"
+    b.appendChild(c)
+    c.appendChild(h)
+    
+})
+
+
+products.forEach(function(values){
+    var c1=document.createElement("tr")
+    var d=document.createElement("td")
+    d.style.border="1px solid"
+    var d1=document.createElement("td")
+    d1.style.border="1px solid"
+    
+    
+    d.innerHTML=values.name
+    d1.innerHTML=values.price
+   
+    
+    c1.appendChild(d)
+    c1.appendChild(d1)
+    b.appendChild(c1)
+    a.appendChild(b)
+})
+//9.3.Display all the products in ascending order of their prices.
+var a=document.getElementById("q2")
+var b=document.createElement("table")
+b.style.border="1px solid"
+a.appendChild(b)
+   
+var c=document.createElement("tr")   
+var ar=['name','type','price','category','manufacturer']
+ar.forEach(function(values){
+     
+    var h=document.createElement("th")
+    h.innerHTML=values
+    h.style.border="1px solid"
+    b.appendChild(c)
+    c.appendChild(h)
+    
+})
+
+products.sort(function(a,b){return (a.price - b.price)})
+products.forEach(function(values){
+    var c1=document.createElement("tr")
+    var d=document.createElement("td")
+    d.style.border="1px solid"
+    var d1=document.createElement("td")
+    d1.style.border="1px solid"
+    var d2=document.createElement("td")
+    d2.style.border="1px solid"
+    var d3=document.createElement("td")
+    d3.style.border="1px solid"
+    var d4=document.createElement("td")
+    d4.style.border="1px solid"
+    
+    d.innerHTML=values.name
+    d1.innerHTML=values.type
+    d2.innerHTML=values.price
+    d3.innerHTML=values.category
+    d4.innerHTML=values.manufacturer
+    
+    c1.appendChild(d)
+    c1.appendChild(d1)
+    c1.appendChild(d2)
+    c1.appendChild(d3)
+    c1.appendChild(d4)
+    
+    b.appendChild(c1)
+    a.appendChild(b)
+    
+
+})
+//9.4.Display the hardgoods and software in separate tables.
+var a=document.getElementById("q3")
+var b=document.createElement("table")
+b.style.border="1px solid"
+a.appendChild(b)
+   
+var c=document.createElement("tr")   
+var ar=['name','type','price','category','manufacturer']
+ar.forEach(function(values){
+     
+    var h=document.createElement("th")
+    h.innerHTML=values
+    h.style.border="1px solid"
+    b.appendChild(c)
+    c.appendChild(h)
+    
+})
+
+
+products.forEach(function(values){
+    if(values.type==="HardGood"){
+    var c1=document.createElement("tr")
+    var d=document.createElement("td")
+    d.style.border="1px solid"
+    var d1=document.createElement("td")
+    d1.style.border="1px solid"
+    var d2=document.createElement("td")
+    d2.style.border="1px solid"
+    var d3=document.createElement("td")
+    d3.style.border="1px solid"
+    var d4=document.createElement("td")
+    d4.style.border="1px solid"
+    
+    d.innerHTML=values.name
+    d1.innerHTML=values.type
+    d2.innerHTML=values.price
+    d3.innerHTML=values.category
+    d4.innerHTML=values.manufacturer
+    
+    c1.appendChild(d)
+    c1.appendChild(d1)
+    c1.appendChild(d2)
+    c1.appendChild(d3)
+    c1.appendChild(d4)
+    
+    b.appendChild(c1)
+    a.appendChild(b)
+    }
+
+})
+//software
+var a=document.getElementById("q4")
+var b=document.createElement("table")
+b.style.border="1px solid"
+a.appendChild(b)
+   
+var c=document.createElement("tr")   
+var ar=['name','type','price','category','manufacturer']
+ar.forEach(function(values){
+     
+    var h=document.createElement("th")
+    h.innerHTML=values
+    h.style.border="1px solid"
+    b.appendChild(c)
+    c.appendChild(h)
+    
+})
+
+
+products.forEach(function(values){
+    if(values.type==="Software"){
+    var c1=document.createElement("tr")
+    var d=document.createElement("td")
+    d.style.border="1px solid"
+    var d1=document.createElement("td")
+    d1.style.border="1px solid"
+    var d2=document.createElement("td")
+    d2.style.border="1px solid"
+    var d3=document.createElement("td")
+    d3.style.border="1px solid"
+    var d4=document.createElement("td")
+    d4.style.border="1px solid"
+    
+    d.innerHTML=values.name
+    d1.innerHTML=values.type
+    d2.innerHTML=values.price
+    d3.innerHTML=values.category
+    d4.innerHTML=values.manufacturer
+    
+    c1.appendChild(d)
+    c1.appendChild(d1)
+    c1.appendChild(d2)
+    c1.appendChild(d3)
+    c1.appendChild(d4)
+    
+    b.appendChild(c1)
+    a.appendChild(b)
+    }
+
+})
+        </script>
+    </body>
+</html>

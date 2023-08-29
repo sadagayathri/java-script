@@ -1,0 +1,181 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="pqr()">Add Text</button>
+        <div id="b"></div><br>        
+        
+        <script>
+          //1
+          function pqr(){
+            var x=document.createElement("h1")
+           x.innerHTML="Welcome to a different world!"
+           var y=document.getElementById("b")
+            y.appendChild(x)
+           }
+        </script>
+       <!--2.-->
+       <div id="d" style="border: 1px solid; height: 10%;width: 20%;"> </div><br>
+        <button id="b1" onclick="a()">Red</button>
+        <button  id="b1" onclick="b()">Green</button>
+        <button  id="b1" onclick="c()">Blue</button>
+        <button  id="b1" onclick="d()">Reset</button>
+       <script>
+       function a(){
+        var a=document.getElementById("b1")
+        var s1=document.getElementById("d")
+        s1.style.background="red"
+       }
+       function b(){
+        var a1=document.getElementById("b1")
+        var s1=document.getElementById("d")
+        s1.style.background="green"
+       }
+       function c(){
+        var a2=document.getElementById("b1")
+        var s1=document.getElementById("d")
+        s1.style.background="blue"
+       }
+       function d(){
+        var a2=document.getElementById("b1")
+        var s1=document.getElementById("d")
+        s1.style.background="white"
+       }
+    </script>
+<!--3.-->
+      <h1 style="color: red;text-align: center;">Change button background color on click</h1>
+        <center><button  id="s" onclick="ab()">white</button></center><br><br>
+        
+ <script>
+       var x=document.getElementById("s")
+       x.style.backgroundColor="white";
+       alert(x.style.backgroundColor)
+      function ab(){
+       if(x.style.backgroundColor==="white"){
+         x.innerHTML="green"
+        x.style.backgroundColor="green"
+        x.style.color="white"
+       }
+       else{
+         x.innerHTML="white"
+        x.style.backgroundColor="white"
+        x.style.color="black"
+       }
+       }
+
+     
+      
+    </script>
+   
+<!--4.-->
+<!-- <div id="a" style="border: 1px solid; height: 10%;width: 20%;" onclick="e1(event)"> </div><br><br>
+
+<script>
+ function e1(e){
+    var x=document.getElementById("a")
+    x.style.backgroundColor="red"
+ }
+ 
+
+</script>
+ 
+<div id="d1"><button onclick="f(event)">Click</button></div><br>
+<script>
+    function f(e){
+   e.target.innerHTML=""
+   var x=document.getElementById("d1")
+    x.innerHTML="Oops!"
+    }
+</script>
+<!---->
+<button onclick="f1(event)">button</button>
+<div id="d2"></div><br>
+
+<script>
+    function f1(e){
+        var d2=document.getElementById("d2");
+        var a=document.createElement("table");
+        a.style.border="1px solid"
+        d2.appendChild(a);
+        var b=document.createElement("tr");
+        b.style.border="1px solid"
+        a.appendChild(b);
+        var c=document.createElement("th");
+        c.style.border="1px solid"
+        c.innerHTML="Name";
+        b.appendChild(c);
+        var d=document.createElement("th");
+        d.style.border="1px solid"
+        d.innerHTML="Age";
+        b.appendChild(d);
+        var e=document.createElement("th");
+        e.style.border="1px solid"
+        e.innerHTML="Gender";
+        b.appendChild(e);
+        var j=document.createElement("tr");
+        j.style.border="1px solid"
+        a.appendChild(j);
+        var h=document.createElement("td");
+        h.style.border="1px solid"
+        j.appendChild(h);
+        h.innerHTML="Reshma";
+        var i=document.createElement("td");
+        i.style.border="1px solid"
+        j.appendChild(i);
+        i.innerHTML="22";
+        var k=document.createElement("td");
+        k.style.border="1px solid"
+        j.appendChild(k);
+        k.innerHTML="Nellore";
+        var l=document.createElement("tr");
+        l.style.border="1px solid"
+        a.appendChild(l);
+        var m=document.createElement("td");
+        m.style.border="1px solid"
+        l.appendChild(m);
+        m.innerHTML="Bharathi";
+        var n=document.createElement("td");
+        n.style.border="1px solid"
+        l.appendChild(n);
+        n.innerHTML="22";
+        var o=document.createElement("td");
+        o.style.border="1px solid"
+        l.appendChild(o);
+        o.innerHTML="Hyd";
+        var z=document.getElementById("d2");
+        z.appendChild(a);
+    }
+</script>
+<button onclick="g()">Decrement</button>
+<span id="ss"></span>
+<button onclick="g1()">Increment</button><br><br>
+<script>
+var count=0
+var a=document.getElementById("ss")
+a.innerHTML=count
+function g(){
+    count--
+    a.innerHTML=count
+}
+
+function g1(){
+    count++
+    a.innerHTML=count
+}
+</script>
+
+<center><h1 style="color: red;">Toggle button to show true/false</h1></center>
+<center><button id="f" onclick="g2(event)" style="background-color: chocolate;">Toggle</button><div id="s1"></div></center>
+<div id="s2"></div>
+
+    <script>
+    function g2(e){
+        var x=document.createElement("p")
+        x.innerHTML="true"
+       var y=document.getElementById("s2")
+     s2.appendChild(x)
+    
+    }
+    </script> -->
+    </body>
+
+</html>

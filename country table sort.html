@@ -1,0 +1,272 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <input type="text" onkeyup="k()" id="k1">
+        <!--<button onclick="srch()">Search</button>-->
+        <button onclick="abc()">Table</button>
+        <button onclick="asc()">Ascending</button>
+        <button onclick="des()">Descending</button><br><br>
+        
+        <table id="t"></table>
+        
+        
+        <script>
+
+        var k1=document.getElementById("k1")
+        var t=document.getElementById("t")
+        t.style.border="1px solid"
+        var o=document.createElement('thead')
+        var j=document.createElement('tfoot')
+        var x=document.createElement("tr")
+        var y=document.createElement("th")
+        y.style.border="1px solid"
+        y.innerHTML="Country name"
+        var y1=document.createElement("th")
+        y1.style.border="1px solid"
+        y1.innerHTML="Population"
+        var y2=document.createElement("th")
+        y2.style.border="1px solid"
+        y2.innerHTML="Capital"
+        var y3=document.createElement("th")
+        y3.style.border="1px solid"
+        y3.innerHTML="Flag"
+        x.appendChild(y)
+        x.appendChild(y1)
+        x.appendChild(y2)
+        x.appendChild(y3)
+        o.appendChild(x)
+        t.appendChild(x)
+        t.appendChild(o)
+        t.appendChild(j)
+
+
+        /*function genUI(){
+            var s=document.createElement("tr")
+        var z=document.createElement("td")
+        z.style.border="1px solid"
+        z.innerHTML=country.name.common
+        var z1=document.createElement("td")
+        z1.style.border="1px solid"
+        z1.innerHTML=country.population
+        var z2=document.createElement("td")
+        z2.style.border="1px solid"
+        z2.innerHTML=country.capital
+        var z3=document.createElement("td")
+        z3.style.border="1px solid"
+        var img=document.createElement("img")
+        img.src=country.flags.svg
+        img.style.width="30%"
+        img.style.height="30%"
+        z3.appendChild(img)
+        s.appendChild(z)
+        s.appendChild(z1)
+        s.appendChild(z2)
+        s.appendChild(z3)
+        t.appendChild(s)
+        }*/
+       function abc(){
+        $.get("https://restcountries.com/v3.1/all",function(countries,status){  
+            j.innerHTML=''
+            console.log("countries::",countries)
+            console.log("status::",status)
+        
+        countries.forEach(function(country){
+            
+        var s=document.createElement("tr")
+        var z=document.createElement("td")
+        z.style.border="1px solid"
+        z.innerHTML=country.name.common
+        var z1=document.createElement("td")
+        z1.style.border="1px solid"
+        z1.innerHTML=country.population
+        var z2=document.createElement("td")
+        z2.style.border="1px solid"
+        z2.innerHTML=country.capital
+        var z3=document.createElement("td")
+        z3.style.border="1px solid"
+        var img=document.createElement("img")
+        img.src=country.flags.svg
+        img.style.width="30%"
+        img.style.height="30%"
+        z3.appendChild(img)
+        s.appendChild(z)
+        s.appendChild(z1)
+        s.appendChild(z2)
+        s.appendChild(z3)
+        t.appendChild(s)
+       
+        j.appendChild(s)
+        
+
+    })
+    
+})
+       }
+
+       function asc(){
+        $.get("https://restcountries.com/v3.1/all",function(countries,status){  
+           j.innerHTML=''
+        countries.sort(function(a,b){
+                            if(a.name.common<b.name.common){
+                                return -1;
+                            }
+                            if(b.name.common<a.name.common){
+                                return 1;
+                            }
+                            return 0
+                        })
+            countries.forEach(function(country){
+
+        var s=document.createElement("tr")
+        var z=document.createElement("td")
+        z.style.border="1px solid"
+        z.innerHTML=country.name.common
+        var z1=document.createElement("td")
+        z1.style.border="1px solid"
+        z1.innerHTML=country.population
+        var z2=document.createElement("td")
+        z2.style.border="1px solid"
+        z2.innerHTML=country.capital
+        var z3=document.createElement("td")
+        z3.style.border="1px solid"
+        var img=document.createElement("img")
+        img.src=country.flags.svg
+        img.style.width="30%"
+        img.style.height="30%"
+        z3.appendChild(img)
+        s.appendChild(z)
+        s.appendChild(z1)
+        s.appendChild(z2)
+        s.appendChild(z3)
+        t.appendChild(s)
+        
+        j.appendChild(s)
+        
+
+    })
+    })
+}
+
+function des(){
+        $.get("https://restcountries.com/v3.1/all",function(countries,status){  
+            j.innerHTML=''
+        countries.sort(function(a,b){
+                            if(a.name.common<b.name.common){
+                                return 1;
+                            }
+                            if(b.name.common<a.name.common){
+                                return -1;
+                            }
+                            return 0
+                        })
+            countries.forEach(function(country){
+                
+        var s=document.createElement("tr")
+        var z=document.createElement("td")
+        z.style.border="1px solid"
+        z.innerHTML=country.name.common
+        var z1=document.createElement("td")
+        z1.style.border="1px solid"
+        z1.innerHTML=country.population
+        var z2=document.createElement("td")
+        z2.style.border="1px solid"
+        z2.innerHTML=country.capital
+        var z3=document.createElement("td")
+        z3.style.border="1px solid"
+        var img=document.createElement("img")
+        img.src=country.flags.svg
+        img.style.width="30%"
+        img.style.height="30%"
+        z3.appendChild(img)
+        s.appendChild(z)
+        s.appendChild(z1)
+        s.appendChild(z2)
+        s.appendChild(z3)
+        t.appendChild(s)
+       
+        j.appendChild(s)
+        
+
+    })
+    })
+}
+
+
+/*function srch(){
+        $.get("https://restcountries.com/v3.1/all",function(countries,status){  
+            t.innerHTML=''
+        
+                
+        var s=document.createElement("tr")
+        var z=document.createElement("td")
+        z.style.border="1px solid"
+        z.innerHTML=country.name.common
+        var z1=document.createElement("td")
+        z1.style.border="1px solid"
+        z1.innerHTML=country.population
+        var z2=document.createElement("td")
+        z2.style.border="1px solid"
+        z2.innerHTML=country.capital
+        var z3=document.createElement("td")
+        z3.style.border="1px solid"
+        var img=document.createElement("img")
+        img.src=country.flags.svg
+        img.style.width="30%"
+        img.style.height="30%"
+        z3.appendChild(img)
+        s.appendChild(z)
+        s.appendChild(z1)
+        s.appendChild(z2)
+        s.appendChild(z3)
+        t.appendChild(s)
+        
+
+    })
+  
+}*/
+
+function k(){
+    $.get("https://restcountries.com/v3.1/all",function(countries,status){ 
+
+var m=countries.filter(function(value,i){
+    return (value.name.common.toLowerCase().startsWith(k1.value.toLowerCase()))
+})
+j.innerHTML=""
+m.forEach(function(country){
+                
+                var s=document.createElement("tr")
+                var z=document.createElement("td")
+                z.style.border="1px solid"
+                z.innerHTML=country.name.common
+                var z1=document.createElement("td")
+                z1.style.border="1px solid"
+                z1.innerHTML=country.population
+                var z2=document.createElement("td")
+                z2.style.border="1px solid"
+                z2.innerHTML=country.capital
+                var z3=document.createElement("td")
+                z3.style.border="1px solid"
+                var img=document.createElement("img")
+                img.src=country.flags.svg
+                img.style.width="30%"
+                img.style.height="30%"
+                z3.appendChild(img)
+                s.appendChild(z)
+                s.appendChild(z1)
+                s.appendChild(z2)
+                s.appendChild(z3)
+                t.appendChild(s)
+               
+                j.appendChild(s)
+                
+        
+            })
+
+    })
+}
+       
+      </script>
+    </body>
+</html>

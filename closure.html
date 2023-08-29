@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+        <ul id="d1">
+
+        </ul>
+        <script>
+            var ar=['gayathri','bhargavi','yesheswi','sharmila','bharathi']
+            
+            ar.forEach(function(a,i){
+                var x=document.createElement("li")
+                x.innerHTML=a
+                var y=document.getElementById("d1")
+                x.onclick=function (){ar.splice(i,1)}
+                gui()
+                y.appendChild(x)
+              
+            })
+        </script>
+    </body>
+</html>

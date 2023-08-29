@@ -1,0 +1,153 @@
+<html>
+    <head></head>
+    <body>
+        <div id="d4"></div>
+        <form onsubmit="event.preventDefault()">
+            first name:<input type="text" id="fn"><br>
+            Last name:<input type="text" id="ln"><br>
+            <b>gender:</b>
+            <input type="radio" name="gender" value="female" onchange="getgender(event)">:female
+            <input type="radio" name="gender" value="female" onchange="getgender(event)">:male
+            <input type="radio" name="gender" value="female" onchange="getgender(event)">:others
+            <br>
+            <b>technologies:</b>
+            <input type="checkbox" onchange="selecttech(event)" value="html">:HTML
+            <input type="checkbox" onchange="selecttech(event)" value="ang">:Angular
+            <input type="checkbox" onchange="selecttech(event)" value="rjs">:Reactjs
+            <input type="checkbox" onchange="selecttech(event)" value="java">:Java
+            <input type="checkbox" onchange="selecttech(event)" value="py">:Python
+            <input type="checkbox" onchange="selecttech(event)" value="njs">:Nodejs
+            <br>
+            <b>Country:</b>
+            <select name="city" id="ctry">
+            <option value="india">INDIA</option>
+            <option value="srilanka">SRILANKA</option>
+            <option value="usa">USA</option>
+            <option value="malasia">MALASIA</option>
+            </select>
+            <br><br>
+            <button onclick="addstudent()" id="ff">Add student</button>
+        </form>
+        <div id="d1"></div>
+        
+        <script>
+            var g=document.getElementById('ff')
+            var students=[]
+            var gender
+            var techs=[];
+            function selecttech(e){
+                if(e.target.checked===true){
+                    techs.push(e.target.value)
+                }
+                else{
+                    var i=text.indexOf(e.target.value)
+                    techs.splice(i,1)
+                }
+                console.log(techs)
+            } 
+            function getgender(e){
+                gender=e.target.value
+            }
+            function addstudent(){
+                var newstudent={
+                   firstname:"",
+                   lastname:" ",
+                   gender:"",
+                   technologies:[],
+                   country:""
+                }
+
+              
+                newstudent.firstname=document.getElementById('fn').value;
+                newstudent.lastname=document.getElementById('ln').value;
+                newstudent.gender=gender
+                newstudent.technologies=techs
+                newstudent.country=document.getElementById("ctry").value
+                console.log(newstudent)
+
+            for(i=0;i<=addstudent.length-1;i++){
+                students[i]=newstudent
+                console.log(students)
+            }
+            var d1=document.getElementById('d1')
+            var a=document.createElement('table')
+            a.style.border="1px solid black"
+
+
+             var xy=document.createElement('tr')
+            
+            var yz=document.createElement('th')
+            yz.style.border="1px solid black"
+             yz.innerHTML='Firstname'
+             var zy=document.createElement('th')
+             zy.style.border="1px solid black"
+             zy.innerHTML='Lastname'
+
+             var wx=document.createElement('th')
+             wx.style.border="1px solid black"
+             wx.innerHTML='gender'
+
+             var fb=document.createElement('th')
+             fb.style.border="1px solid black"
+             fb.innerHTML='technologies'
+
+                 var el=document.createElement('th')
+                 el.style.border="1px solid black"
+                 el.innerHTML='country'
+                 xy.appendChild(yz)
+                 xy.appendChild(zy)
+                 xy.appendChild(wx)
+                 xy.appendChild(fb)
+                 xy.appendChild(el)
+                 a.appendChild(xy)
+                 d1.appendChild(a)
+            
+            students.forEach(function(value){
+                 var x=document.createElement('tr')
+                 
+                 var y=document.createElement('td')
+                 y.style.border="1px solid black"
+                 y.innerHTML=value.Firstname
+                 var z=document.createElement('td')
+                 z.style.border="1px solid black"
+                 z.innerHTML=value.Lastname
+
+                 var w=document.createElement('td')
+                 w.style.border="1px solid black"
+                 w.innerHTML=value.gender
+
+                 var f=document.createElement('td')
+                 f.style.border="1px solid black"
+                 f.innerHTML=value.technologies
+
+                 var e=document.createElement('td')
+                 e.style.border="1px solid black"
+                 e.innerHTML=value.country
+                 x.appendChild(y)
+                 x.appendChild(z)
+                 x.appendChild(w)
+                 x.appendChild(f)
+                 x.appendChild(e)
+                 a.appendChild(x)
+            })
+            d1.appendChild(a)
+
+
+
+
+
+
+
+
+
+            }
+
+   
+            
+        
+            
+    </script>
+    </body>
+    
+
+</html>

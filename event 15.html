@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body> 
+        <input type="text" id="fg">
+        <button onclick="dfg(event)">Add student</button>
+        <ul id="ll">
+
+        </ul>
+        <script>
+         var l=document.getElementById('ll')
+         var g=document.getElementById('fg')
+        var i=0
+         var ar=[]
+         function dfg(e){
+            
+            ar[i]=g.value
+            i++
+           l.innerHTML=""
+
+            ar.forEach(function(value){
+                var k=document.createElement('li')
+               k.innerHTML=value
+               l.appendChild(k)
+            })
+           
+         }
+        </script>
+    </body>
+</html>

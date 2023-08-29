@@ -1,0 +1,133 @@
+<html>
+    <head></head>
+    <body>
+        <!--1.Write a function which can return the sum of two numbers.-->
+        <script>
+            function add(a,b){
+                            return a+b;
+                            }
+                            var sum = add(45,67);
+                            console.log(sum);
+        </script>
+<!--2.Write a function which can return the greatest of the three numbers passed in arguments.-->
+<script>
+    function compare(a,b,c){
+                            if(a>b){
+                                if(a>c){
+                                    return a;
+                                }
+                            }
+                            else if(b>a)
+                            {
+                                if(b>c){
+                                    return b;
+                                }
+                            }
+                            else{
+                                return c;
+                            }
+                            }
+                            var greatest = compare(45,67,23);
+                            console.log(greatest)
+</script>
+<script>
+    function compare(a,b,c){
+                            return(a>b)?((a>c)?a:c):((b>c)?b:c)
+                            }
+                            var greatest = compare(45,67,23);
+                            console.log(greatest);
+</script>
+<!--3.Write a function which can print the given arguments in ascending order.-->
+<script>
+function sortNums(a,b,c){
+                       if(a<b && a<c){
+                         if(b<c){
+                            return {a,b,c}
+                              }
+                              else{
+                                return {a,c,b}
+                               }
+                            }
+                            else if(b<a && b<c){
+                                if(a<c){
+                                    return {b,a,c}
+                                }
+                                else{
+                                    return {b,c,a}
+                                }
+                            }
+                            else if(c<a && c<b){
+                                if(b<a){
+                                    return {c,b,a}
+                                }
+                                else{
+                                    return {c,a,b}
+                                }
+                            }
+                            
+                        }
+                            var ascending = sortNums(45,7,68);
+                            console.log(ascending);
+</script>
+<!--4.Write a function which can return the factorial of a number-->
+<script>
+    function fact(a){
+        var s=1;
+        for(a=1;a<=4;a++){
+            s=s*a;
+           
+        } return s
+           }
+                    var factorial = fact(4);
+                    console.log(factorial);
+</script>
+<!--5.Write a function which can to return the reverse of a given number.-->
+<script>
+    function rev(a){
+        var s=0;
+                while(a>0){
+                    var r=a%10
+                    s=s*10+r
+                    a=parseInt(a/10)
+
+                }  return s 
+                    }
+                    var reverse = rev(4866);
+                    console.log(reverse);
+</script>
+<!--6.Write a function which can check a given number is prime number or not-->
+<script>
+    function p(a){
+      if(a<=1){
+        return false;
+      } 
+       var i=2;
+        if(a%i!==0){
+            return ("prime")
+        }else{
+            return ("not prime")      
+        }
+    }
+    
+    var prime= p(9);
+    console.log(prime);
+
+</script>
+<!--7.Write a function which can check a given number is palindrome or not-->
+<script>
+   function p(a){
+     var n=a.length;
+     for(i=0;i<n/2;i++){
+        if(a[i]!==a[n-2-i]){
+            return("it is  a palindrome")
+        }
+        else{
+            return("it is  not a palindrome")
+        }
+     }
+    }
+     var value=p("ABCBA")
+     console.log(value)
+</script>
+    </body>
+</html>

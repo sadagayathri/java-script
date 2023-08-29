@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <button onclick="getproduct()">Get products</button>
+        <ul id="d1"></ul>
+        <script>
+           function getproduct(){
+                $.get("https://fakestoreapi.com/products",function(products,status){
+                    console.log("products::",products)
+                    console.log("status::",status)
+                    
+                   products.forEach(function(p){
+                    var y=document.createElement("li")
+                    y.innerHTML=p.title
+                    /*var y1=document.createElement("h6")
+                    y1.innerHTML="Population:"+country.population
+                    y1.style.fontSize="80%"
+                    y.appendChild(y1)
+                    var y2=document.createElement("h6")
+                    y2.innerHTML="Capital:"+country.capital
+                    
+                    y.appendChild(y2)
+                    var y3=document.createElement("img")
+                    y3.src=country.flags.svg
+                    y.appendChild(y3)*/
+                    var u1=document.getElementById("d1")
+                    u1.appendChild(y)
+                   })
+                })
+            }
+        </script>
+    </body>
+</html>

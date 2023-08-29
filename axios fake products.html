@@ -1,0 +1,35 @@
+<html>
+    <head><script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script></head>
+    <body>
+        <input type="text" id="t" onkeyup="k()">
+        <button onclick="getproduct()">Get products</button>
+        <button onclick="asc()">Ascending</button>
+        <button onclick="des()">Descending</button>
+        <ul id="d1"></ul>
+        <script>
+            var u1=document.getElementById("d1")
+            var t=document.getElementById("t")
+    
+           function getproduct(){
+            u1.innerHTML=''
+                axios.get("https://fakestoreapi.com/products",function(products,status){
+                    console.log("products::",products)
+                    console.log("status::",status)            
+            .then(function(res){
+                   products.forEach(function(p){
+                    var y=document.createElement("li")
+                    y.innerHTML=p.data.title
+                    u1.appendChild(y)
+                    /*var p1=document.createElement("p")
+                    p1.innerHTML=p.rating.rate
+                    y.appendChild(p1)*/
+
+                   })
+                })
+                
+            })
+        }
+
+            </script>
+    </body>
+</html>

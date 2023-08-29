@@ -1,0 +1,144 @@
+<html>
+    <head></head>
+    <body>
+<!--73.Find the first occurrence of a character in a given string.
+<script>
+    var a="gayathri"
+    console.log(a[0])
+    //console.log(a.charAt(0))
+//74.Find the last occurrence of a character in a given string
+console.log(a.charAt(a.length-1))
+//75.Search all occurrences of a character in a given string.
+for(i=0;i<=a.length-1;i++){
+   var c=a.indexOf("a")  
+   
+}
+console.log(c) 
+//76.Count occurrences of a character in a given string.
+    console.log(a.split("a").length - 1);
+</script>-->
+
+ <!--1.Take a string value from the user and print it in the console.-->
+ <script>
+ var s="Edupoly"
+ console.log(s) 
+</script>
+ <!--2.Take 5 string values from the user and print them in the console.-->
+<script>
+/*for(var i=1;i<=5;i++){
+    var s=prompt()
+    console.log(s)
+}*/
+</script>
+<script>
+//3.Take a string value from the user and print the first character in the console.
+var s="Edupoly"
+console.log(s[0])
+console.log(s.charAt(0))
+</script>
+<script>
+//4.Take 5 string values from the user and print the first characters in the console.
+/*for(var i=1;i<=5;i++){
+    var s=prompt()
+    console.log(s.charAt(0))
+}*/
+</script>
+<script>
+//5.Take a string value from the user and print the last character in the console.
+var a="pineapple"
+console.log(a.charAt(a.length-1))
+</script>
+<script>
+//6.Take 5 string values from the user and print the last characters in the console.
+/*for(var i=1;i<=5;i++){
+    var s=prompt()
+    console.log(s.charAt(s.length-1))
+}*/
+</script>
+<script>
+//7.Take a string value from the user and print the length of the string in the console.
+var a="pineapple"
+console.log(a.length)
+</script>
+<script>
+//8.Take a string value from the user and print all the characters in the console.
+var a="Edupoly"
+for(var i=0;i<=a.length-1;i++)
+{
+    console.log(a[i])
+}
+</script>
+<script>
+//9.Take a string value from the user and print only alternate characters in the console. Given string: "abcdef", Expected output: "a" "c" "e"
+    var a= "abcdef"
+    for(var i=0;i<=a.length-1;i++){
+        if(i%2===0){
+            console.log(a[i])
+        }
+    }
+</script>
+<script>
+//10.Take a string value from the user and print all the characters in reverse order in the console. Given string: "abcdef", Expected output:"f" "e" "d" "c" "b" "a"
+var a= "abcdef"
+var b=a.split("").reverse().join("")
+console.log(b)
+//
+
+</script>
+
+<script>
+//11.Take a string and check whether a given character is present in the string or not. Given string: "edupoly", given character: 'p', Expected output: true
+var a= "edupoly"
+var b="p"
+for(i=0;i<=a.length-1;i++)
+{
+    if(b===a[i])
+    {
+        console.log("true")
+    }
+    else{
+        console.log("false")
+    }
+}
+//includes
+var a= "edupoly"
+console.log(a.includes("p"))
+//12.Take a string and print the position(index) at which a given character occurs. Given string: "edupoly", given character:"p", Expected output: 3
+var b="edupoly"
+console.log(b.indexOf("p"))
+</script>
+<script>
+//13.Take two string values from the user, join them together(concatenate) and print it in the console.
+var s= "gayathri"
+var t="sada"
+console.log(s.concat(t))
+console.log(s+t)
+//14.Copy the characters of a given string from one variable to another variable.
+var a= "edupoly"
+var b=""
+for(var i=0;i<=a.length-1;i++){
+    b=b+a[i]
+    console.log(b)
+}
+//
+var a= "edupoly"
+var b;
+b=a;
+console.log(b)
+//15.Print the reverse of a given string in the console.
+var a= "edupoly"
+console.log(a.split("").reverse().join(""))
+//16.Check whether a string is palindrome or not.
+var s="ABCBA"
+var k=s.split("").reverse().join("")
+console.log(k)
+if(k===s)
+{
+    console.log("palindrome")
+}
+else{
+    console.log("not palindrome")
+}
+</script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+    <head></head>
+    <body>
+        <div></div>
+        <img id="image"src="">
+    <button onclick="prev()">prev</button>
+    <button onclick="next()">next</button>
+    
+    </body>
+    <script>
+       var ar=["https://t3.ftcdn.net/jpg/00/20/13/60/360_F_20136083_gk0ppzak6UdK9PcDRgPdLjcuAdo7o1LK.jpg",
+        "https://media.sciencephoto.com/c0/06/94/98/c0069498-800px-wm.jpg"]
+        var i=0;
+        image.src=ar[0]
+        var x=document.getElementById("image")
+        function prev(){
+            if(i===0){
+                image.src=ar[ar.length-1]
+            }
+            else{
+                i--
+                image.src=ar[i]
+            }
+        }
+        function next(){
+            if(i===ar.length-1){
+                image.src=ar[0]
+            }
+            else{
+                i++
+                image.src=ar[i]
+            }
+        }
+    </script>
+</html>

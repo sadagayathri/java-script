@@ -1,0 +1,160 @@
+<html>
+    <head></head>
+    <body>
+<h1 style="color: red;text-align: center;">Toggle button to show true/false</h1>
+<center><button id="d1" onclick="abc()" style="background-color: chocolate;">Toggle</button><span id="sp"> </span></center><br><br>
+<div id="d"></div>
+<script>
+    var x=false
+    var y=document.getElementById("sp")
+    y.innerHTML=x
+    function abc(){
+        x=!x;
+        y.innerHTML=x
+    }
+    
+</script>
+<button id="d2" onclick="a()">on</button><br><br>
+<script>
+var x=document.getElementById("d2")
+x.style.width="10%"
+x.style.height="10%"
+x.style.fontSize="200%"
+    function a(){
+if(x.innerHTML==="on"){
+    x.innerHTML="off"
+}
+else{
+    x.innerHTML="on"
+}
+    }
+</script>
+<div id="ss1" style="border:1px solid ;width: 20%;height: 20%; text-align: center;font-size: 220%;"> </div><br>
+<button onclick="b()">True/False</button>
+<script>
+    var x1=document.getElementById("ss1")
+    x1.innerHTML="im nothing"
+    
+    function b(){
+        if(x1.innerHTML=="I'm nothing"){
+           x1.innerHTML="true"
+          
+            }
+            else if(x1.innerHTML=="true"){
+              x1.innerHTML="false"
+            }
+            else{
+                x1.innerHTML="true"
+            }
+            
+    }
+
+</script>
+<center><h1 style="color: red;">Like and Dislike Button</h1></center>
+<center><button id="d3" onclick="c()">like</button>    <span id="s"></span><br>
+<br></center>
+<center><button id="d4" onclick="d()">Dislike</button>     <span id="s1"></span></center>
+    </body>
+    <script>
+        var x=document.getElementById("d3")
+        x.style.backgroundColor="lightgreen"
+        x.style.width="8%"
+        x.style.height="8%"
+        var y1=document.getElementById("d4")
+        y1.style.backgroundColor="red"
+        y1.style.width="10%"
+        y1.style.height="8%"
+        y1.style.color="white"
+        var count=0
+        var z=document.getElementById("s")
+        z.innerHTML=count
+        function c(){
+           count++
+           z.innerHTML=count 
+        }
+        var count1=0
+        var z1=document.getElementById("s1")
+        z1.innerHTML=count1
+        
+        function d(){
+            count1++
+           z1.innerHTML=count1
+           
+        }
+    </script>
+<h1 style="color: red;text-align: center;">Change background color of box using buttons</h1>
+<center><div id="d5"></div></center><br>
+<center><button id="d6" onclick="e()">ON</button>
+<button id="d7" onclick="f()">OFF</button></center>
+<script>
+    var x=document.getElementById("d5")
+    x.style.border="1px solid"
+    x.style.width="10%"
+    x.style.height="10%"
+
+    var a=document.getElementById("d6")
+    a.style.backgroundColor="yellow"
+    var b=document.getElementById("d5")
+    function e(){
+    if(a.style.backgroundColor="red"){
+    b.style.backgroundColor="yellow"
+    a1.style.backgroundColor="white"
+    }
+    
+    }
+    var a1=document.getElementById("d7")
+    a1.style.backgroundColor="yellow"
+    function f(){
+    if(a1.style.backgroundColor="red"){
+        b.style.backgroundColor="white"
+        a.style.backgroundColor="white"
+    }
+    }
+</script>
+<br>
+<center><div id="d8"></div></center><br>
+<center><button id="d9" onclick="g()" style="background-color: chocolate;">Toggle</button></center>
+<script>
+     var x=document.getElementById("d8")
+    x.style.border="1px solid"
+    x.style.width="10%"
+    x.style.height="10%"
+    x.style.backgroundColor="white"
+function g(){
+    if(x.style.backgroundColor=="white"){
+    x.style.backgroundColor="yellow"
+}
+else if(x.style.backgroundColor=="yellow"){
+    x.style.backgroundColor="white"
+}
+}
+</script>
+<center><img id="a1" src="https://toppng.com/uploads/preview/light-bulb-on-off-png-11553940436956yaa8jki.png" style="width: 30%;"></center>
+<center><img id="a2" src="https://i.pinimg.com/1200x/c3/e1/d2/c3e1d23c30c09528bc8f06d50e3de232.jpg" style="width: 15%;"></center><br>
+<center><button id="a3" onclick="bulb()" style="background-color: rgb(240, 126, 44);"></button></center>
+<script>
+    var z=document.getElementById("a3")
+z.innerHTML="on"
+var y=document.getElementById("a2")
+y.style.display="block"
+var x=document.getElementById("a1")
+x.style.display="none"
+function bulb(){
+    if(z.innerHTML=="on"){
+        y.style.display="block"
+        x.style.display="none"
+        z.innerHTML="off"
+    
+       
+    }
+    else if(z.innerHTML=="off"){
+        y.style.display="none"
+        x.style.display="block"
+        z.innerHTML="on"
+    }
+}
+//https://static.vecteezy.com/system/resources/previews/010/941/475/original/cute-lightbulb-cartoon-icon-illustration-education-technology-icon-concept-isolated-premium-flat-cartoon-style-vector.jpg
+//https://www.shutterstock.com/shutterstock/photos/183247139/display_1500/stock-vector-cartoon-grey-bulb-that-is-sad-because-she-is-turned-off-183247139.jpg
+</script>
+
+</html>

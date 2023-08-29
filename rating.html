@@ -1,0 +1,32 @@
+<html>
+    <head></head>
+    <body>
+        <center>
+        <label id="1" onclick="abc(this.id)">&#9734;</label>
+        <label id="2" onclick="abc(this.id)">&#9734;</label>
+        <label id="3" onclick="abc(this.id)">&#9734;</label>
+        <label id="4" onclick="abc(this.id)">&#9734;</label>
+        <label id="5" onclick="abc(this.id)">&#9734;</label>
+    
+    <h2>Reviews:</h2>
+    <span id="dd"></span>
+    </center>
+    <script>
+        function abc(e){
+            for(var i=1;i<=5;i++){
+                if(i<=e){
+                    document.getElementById(i).innerHTML='&#9733;'
+    
+                }else{
+                    document.getElementById(i).innerHTML='&#9734;'
+                }
+                
+                
+            }
+    
+            document.getElementById("dd").innerHTML=e+"/5"
+    
+        }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,330 @@
+<html>
+    <head></head>
+    <body>
+<!--For the Given array: [23,34,54,10,4,7] print the minimum number in an Array. Expected output: 4-->
+<script>
+    var ar= [23,34,54,10,4,7]
+    var min=+Infinity
+    var max=-Infinity
+   ar.forEach(function(value,index,array){
+    if(value<min){
+        min=value  
+    }
+    })
+    console.log(min)
+//map
+    var ar= [23,34,54,10,4,7]
+    var min=+Infinity
+    var max=-Infinity
+   ar.map(function(value,index,array){
+    if(value<min){
+        min=value  
+    }
+    })
+    console.log(min)
+//filter
+    var ar= [23,34,54,10,4,7]
+    var min=+Infinity
+    var max=-Infinity
+   ar.filter(function(value,index,array){
+    if(value<min){
+        min=value  
+    }
+    })
+    console.log(min)
+</script>
+<!--2.For the Given array: [23,34,54,10,4,7] print the Maximum number in an array. Expected output: 54-->
+<script>
+    var ar= [23,34,54,10,4,7]
+    var min=+Infinity
+    var max=-Infinity
+   ar.forEach(function(value,index,array){
+    if(value>max){
+        max=value  
+    }
+    })
+    console.log(max)
+//map
+    var ar= [23,34,54,10,4,7]
+    var min=+Infinity
+    var max=-Infinity
+   ar.map(function(value,index,array){
+    if(value>max){
+        max=value  
+    }
+    })
+    console.log(max)
+//filter
+var ar= [23,34,54,10,4,7]
+    var min=+Infinity
+    var max=-Infinity
+   ar.filter(function(value,index,array){
+    if(value>max){
+        max=value  
+    }
+    })
+    console.log(max)
+</script>   
+<!--3.For the Given array: [23,34,54,10,4,7] sum of all the numbers in an Array. Expected output: 132-->
+<script>
+    var ar= [23,34,54,10,4,7]
+    var total=0;
+   ar.forEach(function(value,index,array){
+        total=total+value 
+    }) 
+    console.log(total)
+
+    /*var ar= [23,34,54,10,4,7]
+    var total=0;
+   ar.forEach(function(value,index,array){
+    if(value>0){
+        total=total+value
+    }
+ 
+    }) 
+    console.log(total)*/
+    //map
+    var ar= [23,34,54,10,4,7]
+    var total=0;
+   ar.map(function(value,index,array){
+    if(value>0){
+        total=total+value
+    }
+ 
+    }) 
+    console.log(total)
+//filter
+var ar= [23,34,54,10,4,7]
+    var total=0;
+   ar.filter(function(value,index,array){
+    if(value>0){
+        total=total+value
+    }
+ 
+    }) 
+    console.log(total)
+//reduce
+var ar= [23,34,54,10,4,7]
+   
+   var c=ar.reduce(function(accumulator,value,index,array){
+    return accumulator+value
+        
+    },0)
+    console.log(c)
+    
+    </script>
+<!--4.For the Given array: [23,34,54,10,4,7] Average of all the numbers in an Array. Expected output: 22-->
+<script>
+    var ar= [23,34,54,10,4,7]
+    var total=0;
+   ar.forEach(function(value,index,array){
+    if(value>0){
+        total=total+value
+    }
+ 
+    }) 
+    console.log(total/6)
+//map
+    var ar= [23,34,54,10,4,7]
+    var total=0;
+   ar.map(function(value,index,array){
+    if(value>0){
+        total=total+value
+    }
+ 
+    }) 
+    console.log(total/6)
+//filter
+var ar= [23,34,54,10,4,7]
+    var total=0;
+   ar.filter(function(value,index,array){
+    if(value>0){
+        total=total+value
+    }
+ 
+    }) 
+    console.log(total/6)
+//reduce
+var ar= [23,34,54,10,4,7]
+   var c=ar.reduce(function(accumulator,value,index,array){
+   return accumulator+value
+    },0) 
+    console.log(c/6)
+</script>
+<!--5.For the Given array: [23,34,54,10,4,7] search if the given number is there in an array or not. Given number: 34, Expected output: true Given number: 26, Expected output: false-->
+<script>
+    var ar= [23,34,54,10,4,7]
+    var s=34
+   ar.forEach(function(value,index,array){
+    if(s===value){
+       console.log("true")
+    }
+    else{
+        console.log("false")
+    }
+    }) 
+//map
+    var ar= [23,34,54,10,4,7]
+    var s=34
+   ar.map(function(value,index,array){
+    if(s===value){
+       console.log("true")
+    }
+    else{
+        console.log("false")
+    }
+    }) 
+//filter
+var ar= [23,34,54,10,4,7]
+    var s=34
+   ar.filter(function(value,index,array){
+    if(s===value){
+       console.log("true")
+    }
+    else{
+        console.log("false")
+    }
+    })
+//reduce
+var ar= [23,34,54,10,4,7]
+    var s=34
+   ar.reduce(function(accumulator,value,index,array){
+    if(s===value){
+       console.log("true")
+    }
+    else{
+        console.log("false")
+    }
+    },0)  
+</script>
+<!--6.For the Given array: [23,34,54,10,34,7,23,10,34] print the total number of times an element found in the array. Given number: 23, Expected output: 2 Given number: 34, Expected output: 3 Given number: 10, Expected output: 2 Given number: 54, Expected output: 1-->
+<script>
+    var ar=  [23,34,23,10,34,7,23,10,34]
+    var count=0,s=23
+   ar.forEach(function(value,index,array){
+    if(s===value){
+        count++
+    }
+    })
+    console.log(count)
+//map
+    var ar=  [23,34,23,10,34,7,23,10,34]
+    var count=0,s=23
+   ar.map(function(value,index,array){
+    if(s===value){
+        count++
+        
+    }
+    })
+    console.log(count)
+//filter
+    var ar=  [23,34,23,10,34,7,23,10,34]
+    var count=0,s=23
+   ar.filter(function(value,index,array){
+    if(s===value){
+        count++
+        
+    }
+    })
+    console.log(count)
+//reduce
+    var ar=  [23,34,23,10,34,7,23,10,34]
+    var count=0,s=23
+   ar.reduce(function(accumulator,value,index,array){
+    if(s===value){
+        count++
+        
+    }
+    },0)
+    console.log(count)
+</script>
+<!--7.For the Given array: [23,34,54,10,4,7] print index of a given element in an Array. Given number: 23, Expected output: 0 Given number: 34, Expected output: 1 Given number: 10, Expected output: 3 Given number: 54, Expected output: 2-->
+<script>
+    var ar= [23,34,54,10,4,7]
+    var s=54
+   ar.forEach(function(value,index,array){
+    if(s==value){
+        console.log(index)
+    }
+    }) 
+//map
+var ar= [23,34,54,10,4,7]
+    var s=54
+   ar.map(function(value,index,array){
+    if(s==value){
+        console.log(index)
+    }
+    }) 
+//filter
+var ar= [23,34,54,10,4,7]
+    var s=54
+   ar.filter(function(value,index,array){
+    if(s==value){
+        console.log(index)
+    }
+    }) 
+//reduce
+var ar= [23,34,54,10,4,7]
+    var s=54
+   ar.reduce(function(accumulator,value,index,array){
+    if(s==value){
+        console.log(index)
+    }
+    },0) 
+</script>
+<!--8.a program to store an array into another array var ar = [23,34,54,10,4,7] var br = [ ] Expected output: br = [23,34,54,10,4,7]-->
+<script>
+    var ar= [23,34,54,10,4,7]
+   var br=[]
+   ar.map(function(value,index,array){
+     br=ar
+    }) 
+    console.log(br)
+//filter
+var ar= [23,34,54,10,4,7]
+   var br=[]
+   ar.filter(function(value,index,array){
+     br=ar
+    }) 
+    console.log(br)
+//reduce
+var ar= [23,34,54,10,4,7]
+   var br=[]
+   ar.reduce(function(accumulator,value,index,array){
+     br=ar
+    },0) 
+    console.log(br)
+</script>
+<!--9.Sort an array in ascending order. Given array: [23,34,54,10,4,7] Expected output: 4,7,10,23,34,54-->
+<script>
+    var ar= [23,34,54,10,4,7]
+   ar.sort(function(a,b){return a-b})
+   console.log(ar)
+
+
+   /*var ar= [23,34,54,10,4,7]
+   ar.sort(function(a,b){
+    if(a<b){
+        return -1;
+    }
+    if(b<a){
+        return 1;
+    }
+    return 0
+   })
+   console.log(ar)*/
+</script>
+<!--10.Store only even numbers of a given array in another array.-->
+<script>
+    var ar= [23,34,54,10,4,7]
+  var c=ar.filter(function(value,index,array){
+     if(value%2==0){
+        return value
+     }
+     
+    })
+    console.log(c)  
+</script>
+<!--11.print only the perfect squares in an array-->
+    </body>
+</html>

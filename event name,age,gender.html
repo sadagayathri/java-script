@@ -1,0 +1,97 @@
+<html>
+    <head></head>
+    <body>
+        
+        <form onsubmit="event.preventDefault()">
+            Name:<input type="text" id="n"><br>
+            
+            age:<input type="text" id="age"><br>
+            <!--<button id="action">Action</button>-->
+            <b>gender:</b>
+            <input type="radio" name="gender" value="female" onchange="getgender(event)">:female
+            <input type="radio" name="gender" value="male" onchange="getgender(event)">:male
+            <input type="radio" name="gender" value="others" onchange="getgender(event)">:others
+            <br>
+            <button onclick="addstudent()" id="ff">Add student</button>
+        </form>
+        <div id="d1"></div><br><br>
+        
+        <script>
+            var g=document.getElementById('ff')
+            var students=[]
+            var gender;
+            function getgender(e){
+                gender=e.target.value
+            }
+            
+            var d1=document.getElementById('d1')
+            var a=document.createElement('table')
+            a.style.border="1px solid black"
+
+
+             var a1=document.createElement('tr')
+            
+            var b=document.createElement('th')
+            b.style.border="1px solid black"
+             b.innerHTML='name'
+
+             var b1=document.createElement('th')
+             b1.style.border="1px solid black"
+             b1.innerHTML='age'
+
+             var b2=document.createElement('th')
+             b2.style.border="1px solid black"
+             b2.innerHTML='gender'
+                a1.appendChild(b)
+                 a1.appendChild(b1)
+                 a1.appendChild(b2)
+                 a.appendChild(a1)
+                 var but=document.createElement("button")
+                but.innerHTML="Action"
+                a1.appendChild(but)
+           
+                function addstudent(){
+                var newstudent={
+                   name:"",
+                   age:"",
+                   gender:"",
+                }
+                
+                newstudent.name=document.getElementById('n').value;
+                newstudent.age=document.getElementById('age').value;
+                newstudent.gender=gender
+                i=0;              
+              students[i]=newstudent
+
+              students.forEach(function(value,i){
+                 var x=document.createElement('tr')
+                 var dbtn=document.createElement("button")
+                dbtn.innerHTML="delete"
+                 
+                 var y=document.createElement('td')
+                 y.style.border="1px solid black"
+                 y.innerHTML=value.name
+
+                 var y1=document.createElement('td')
+                 y1.style.border="1px solid black"
+                 y1.innerHTML=value.age
+
+                 var y2=document.createElement('td')
+                 y2.style.border="1px solid black"
+                 y2.innerHTML=value.gender
+                 x.appendChild(y)
+                 x.appendChild(y1)
+                 x.appendChild(y2)
+                 a.appendChild(x)
+                 x.appendChild(dbtn)
+                })
+            d1.appendChild(a)
+            dbtn.onclick=function(){students.splice(i,1)}
+                }  
+  
+    </script>
+    </body>
+    
+
+</html>
+<html>

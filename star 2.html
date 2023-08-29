@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    </head>
+    <body>
+       <center> <i  id="0" class="bi" onclick="c(event)"></i>
+        <i id="1" class="bi" onclick="c(event)"></i>
+        <i id="2" class="bi" onclick="c(event)"></i>
+        <i id="3" class="bi" onclick="c(event)"></i>
+        <i id="4" class="bi" onclick="c(event)"></i></center>
+    </body>
+    <script>
+
+
+var x=document.getElementsByClassName("bi") 
+for (var i=0;i<=x.length-1;i++){
+    x[i].classList.add("bi-star")
+}
+function c(e){
+   console.log(e.target.id) 
+   for(var j=0;j<=x.length-1;j++){
+     if(j<=e.target.id){
+    x[j].classList.remove("bi-star")
+    x[j].classList.add("bi-star-fill")
+   }
+   else{
+    x[j].classList.remove("bi-star-fill")
+    x[j].classList.add("bi-star")
+   }
+   }
+}
+</script>
+</html>

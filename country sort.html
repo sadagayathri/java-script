@@ -1,0 +1,38 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="getcountry()">Get countries</button>
+        <ul id="d1"></ul>
+        <script>
+           function getcountry(){
+                $.get("https://restcountries.com/v3.1/all",function(countries,status){
+                    console.log("countries::",countries)
+                    console.log("status::",status)
+                    countries.sort(function(a,b){
+                            if(a.population<b.population){
+                                return -1;
+                            }
+                            if(b.population<a.population){
+                                return 1;
+                            }
+                            return 0
+                        })
+                    })
+                    countries.forEach(function(country){
+                    var y=document.createElement("li")
+                    y.innerHTML=country.name.common
+                    var y1=document.createElement("h6")
+                    y1.innerHTML="Population:"+country.population
+                    y1.style.fontSize="80%"
+                    y.appendChild(y1)
+                    var y2=document.createElement("h6")
+                    y2.innerHTML="Capital:"+country.capital
+                    
+                    y.appendChild(y2)
+                    var u1=document.getElementById("d1")
+                    u1.appendChild(y)
+                    })
+                }
+                        </script>
+    </body>
+</html>

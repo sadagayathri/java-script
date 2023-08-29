@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <body>
+            <center>
+            <span style="color: red;">Name:</span><input id="name" type="text"><br><br>
+            <span>Number:</span><input id="number" type="number"><br><br>
+            <span>Email:</span><input id="email" type="email"><br><br>
+            <span>Enter image URL:</span><input id="imgurl" type="text"><br><br>
+            <button id="d5" onclick="abc()">Add Contact</button><br><br><br>
+        </center>
+            <div id="dd"></div>
+        
+        
+        <script>
+             var ar=[];
+             var i=0;
+             var y=document.getElementById("dd")
+             function abc(){
+                var ar1={}; 
+                var name=document.getElementById("name").value
+                var number=document.getElementById("number").value
+                var email=document.getElementById("email").value
+                var imgurl=document.getElementById("imgurl").value
+                ar1.name=name
+                ar1.number=number
+                ar1.email=email
+                ar1.imgurl=imgurl
+                ar[i].push(ar1)
+                var x=document.createElement("div")
+                x.style.border="1px solid red"
+                x.style.width="200px"
+                
+                x.style.backgroundColor="yellow"
+                var img=document.createElement("img")
+                img.style.width="70px"
+                img.style.height="70px"
+                img.style.borderRadius="50%"
+                img.src=ar[i].imageurl
+                x.appendChild(img)
+                var uname=document.createElement("p")
+                uname.innerHTML="Name:"+ar[i].name
+                x.appendChild(uname)
+                var num=document.createElement("p")
+                num.innerHTML="Number:"+ar[i].number
+                x.appendChild(num)
+                var mail=document.createElement("p")
+                mail.innerHTML="Email:"+ar[i].email
+                x.appendChild(mail)
+                i++
+                
+                var dbtn=document.createElement("button")
+                dbtn.innerHTML="Delete"
+                function display(){
+                dbtn.onclick=function(){
+                    ar.splice(i,1)
+                }
+                
+                display();
+            }
+                
+            }
+            x.appendChild(dbtn)
+            y.appendChild(x)
+
+            </script>
+            </body>
+        </head>
+    </html>

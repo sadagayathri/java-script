@@ -1,0 +1,47 @@
+<html>
+    <head></head>
+    <body>
+<h1 id="a">Hello World</h1>
+<h1 class="a">Hello </h1>
+<h2 class="a">Edupoly</h2>
+<!--<p class="b">Training</p>-->
+<ul>
+    <li>Apple</li>
+   <li>Mango</li>
+   <li>Orange</li>
+</ul>
+<h1>Hello</h1>
+<p>Edupoly</p>
+<p>Training</p>
+<p>Something</p>
+<script>
+//1.a.Print the text inside the h1 element in the console.
+var a=document.getElementsByTagName("h1")
+console.log(a)
+//1.b.Print the data type of the text inside the h1.
+console.log(typeof a)
+//1.c.Print the text inside the h1 in uppercase in the console.
+console.log(a[0].innerHTML.toUpperCase())
+//1.d.Change the text of the h1 to "Welcome to Edupoly".
+var x=document.getElementById("a")
+x.innerHTML="Welcome to Edupoly"
+console.log(x)
+//2.Print the texts inside the h1 and h2 elements in the console.
+var y=document.getElementsByClassName("a")
+for(i=0;i<=y.length-1;i++){
+    console.log(y[i].innerHTML)
+}
+//3.Store the texts of each li element in an array.
+
+var ar=[]
+var x=document.getElementsByTagName("li")
+for(var i=0;i<=x.length-1;i++){
+    ar.push(x[i].innerHTML)
+}
+console.log(ar)
+//4.Print the text inside the first paragraph element in the console.
+var x=document.getElementsByTagName("p")
+console.log(x[0].innerHTML)
+        </script>
+    </body>
+</html>

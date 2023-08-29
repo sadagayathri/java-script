@@ -1,0 +1,37 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" id="tx"><button onclick="abc()">click</button>
+        <ul id="u1"></ul>
+        <ul id="u2"></ul>        
+        <script>
+            var ar=['apple','aeroplane','ant','banana','bird','bat','cat','crow']
+            var tx=document.getElementById("tx")
+            var u1=document.getElementById("u1")
+            ar.forEach(function(value,i){ 
+                var u2=document.getElementById("u2")
+                var y=document.createElement("li")
+                y.innerHTML=value
+                u2.appendChild(y)                 
+                })
+        
+            function abc(){
+                u1.innerHTML=""
+                u2.innerHTML=""
+                ar.forEach(function(value,i){ 
+                    if(tx.value===value.slice(0,1)){
+                var x=document.createElement("li")
+                x.innerHTML=value
+                u1.appendChild(x)
+                    }
+                })
+            }
+               
+         
+      
+
+
+            
+        </script>
+    </body>
+</html>

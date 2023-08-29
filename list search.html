@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" onkeyup="abc()" id="ip">
+        <ul id="d1"></ul>
+        <script>
+            var ar=['mango','apple','ant','aeroplane','pineapple','ball','bat','cat','crow']
+            var x=document.getElementById('d1')
+            ar.forEach(function(value,index){
+                var y=document.createElement('li')
+                y.innerHTML=value
+                x.appendChild(y)
+            })
+            var s=document.getElementById('ip')
+            function abc(){
+                var n=ar.filter(function(value,index){
+                    return(value.startsWith(s.value))
+                })
+                gen(n);
+            }
+            function gen(k){
+                x.innerHTML=''
+                k.forEach(function(v,i){
+                    var y=document.createElement('li')
+                    y.innerHTML=v;
+                    x.appendChild(y);
+                })
+            }
+        </script>
+    </body>
+</html>

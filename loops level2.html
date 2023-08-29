@@ -1,0 +1,308 @@
+<html>
+    <head></head>
+    <body>
+   <!--1.Write a program to print even numbers between 1 and 10-->
+   <script>
+    var a=1;
+    while(a<=10)
+    {
+        if(a%2==0)
+        {
+            console.log(a)
+        }
+        a++;
+    }
+   </script>  
+ <!--2.Write a program to print odd numbers between 1 and 25-->  
+ <script>
+    var a=1;
+    while(a<=25)
+    {
+        if(a%3==0)
+        {
+            console.log(a)
+        }
+        a++;
+    }
+   </script> 
+<!--3.Write a program to print even numbers between 23 and 56 -->
+<script>
+    var a=23;
+    while(a<=56)
+    {
+        if(a%2==0)
+        {
+            console.log(a)
+        }
+        a++;
+    }
+   </script> 
+<!--4.Write a program to print odd numbers between -48 and -12 -->
+<script>
+    var a=-48;
+    while(a<=-12)
+    {
+        if(a%3==0)
+        {
+            console.log(a)
+        }
+        a++;
+    }
+   </script> 
+<!--5.Write a program to print even numbers between -50 and 8-->
+<script>
+    var a=-50;
+    while(a<=8)
+    {
+        if(a%2==0)
+        {
+            console.log(a)
+        }
+        a++;
+    }
+   </script>
+<!--6.Write a program to print odd numbers between 10 and 1-->
+<script>
+    var a=10;
+    while(a>=1)
+    {
+        if(a%3==0)
+        {
+            console.log(a)
+        }
+        a--;
+    }
+   </script> 
+<!--7.Write a program to print even numbers between 20 and 1 -->
+<script>
+    var a=20;
+    while(a>=1)
+    {
+        if(a%2==0)
+        {
+            console.log(a)
+        }
+        a--;
+    }
+   </script>
+<!--8.Write a program to print odd numbers between 46 and 23-->
+<script>
+    var a=46;
+    while(a>=23)
+    {
+        if(a%3==0)
+        {
+            console.log(a)
+        }
+        a--;
+    }
+   </script>
+<!--9.Write a program to print even numbers between 24 and -4-->
+<script>
+    var a=24;
+    while(a>=-4)
+    {
+        if(a%2==0)
+        {
+            console.log(a)
+        }
+        a--;
+    }
+   </script>
+<!--10.Write a program to print odd numbers between -3 and -36-->
+<script>
+    var a=-3;
+    while(a>=-36)
+    {
+        if(a%3==0)
+        {
+            console.log(a)
+        }
+        a--;
+    }
+   </script>
+<!--11.Write a program to print factors of 24(factors of 24 are 1,2,3,4,6,8,12,24)-->
+<script>
+    var a=1;
+    while(a<=24)
+    {
+        if(24%a==0){
+            console.log(a)
+        }
+    
+    a++;
+    }
+</script>
+<!--12.Write a program to print all the factors of a given number-->
+<script>
+    var a=1;
+    while(a<=50)
+    {
+        if(50%a==0){
+            console.log(a)
+        }
+    
+    a++;
+    }
+</script>
+<!--13.a program to read 5 numbers and print the maximum and minimum number-->
+<!--<script>
+    var max=-Infinity;
+    var min=Infinity;
+    for(var i=0;i<=4;i++)
+    {
+        var x =+prompt("enter the numbers")
+        if(max>x){
+            max=x;
+        }
+        if(min>x){
+            min=x;
+        }
+console.log(max +"maximum number")
+console.log(min +"miniimum number")
+    }
+
+</script>-->
+<!--16.Write a program to print only even digits of a given number The output should be 4,2,6 Ex. Let us take 154256-->
+<script>
+    var a=154256,s=0;
+
+    while(a>0)
+    {
+       var r=a%10;
+       if(r%2==0)
+       {
+        s++;
+       }
+       a=parseInt(a/10)
+     }
+     console.log(s)
+     
+</script>
+<!--17.Write a program to print only odd digits of a given number Ex. Let us take 1542763 The output should be 1,5,7,3-->
+<script>
+    var a=1542763,s=0;
+
+    while(a>0)
+    {
+       var r=a%10;
+       if(r%2!==0)
+       {
+        s++;
+       }
+       a=parseInt(a/10)
+     }
+     console.log(s)
+     
+</script>
+<!--22.Write a program to find the LCM of given two numbers-->
+<script>
+    var a=5,b=17,s,r;
+   if(a%2==0)
+   {
+    s=a;
+    if(b%2==0)
+    {
+     r=b;
+    }
+    console.log(s,r)
+   }
+</script>
+<!--24.Write a program to print the sum of 1 to 10 ( initialisation of sum variable with 0 )-->
+<script>
+    var i=1,s=0;
+    for(i=1;i<=10;i++)
+    {
+        s=s+i;
+        
+    }
+    console.log(s)
+    
+</script>
+<!--25.Write a program to print the average of 1 to 10-->
+<script>
+    var i=1,s=0;
+    for(i=1;i<=10;i++)
+    {
+        s=s+i/10; 
+      
+    }
+    console.log(s)
+    
+</script>
+<!--26.Write a program to print the sum of the numbers between the given two numbers-->
+<!--<script>
+    var s;
+    var x=+prompt();
+        var y=+prompt()
+    for(i=0;i<=1;i++){
+        
+       s=x+y;
+       
+    }
+    console.log(s)
+</script>-->
+<!--27.Write a program to print the sum of even numbers between the given two numbers-->
+<!--<script>
+    var s;
+    
+    for(i=0;i<1;i++){
+        var x=+prompt();
+    var y=+prompt()
+        if(x%2==0 && y%2==0){
+            s=x+y; 
+            console.log(s) 
+        }
+        else{
+            console.log("odd")
+        }
+    }
+    
+</script>
+28.Write a program to print the sum of odd numbers between the given two numbers
+<script>
+    var s;
+    
+    for(i=0;i<1;i++){
+        var x=+prompt();
+    var y=+prompt()
+        if(x%2!==0 && y%2!==0){
+            s=x+y; 
+            console.log(s) 
+        }
+        else{
+            console.log("even")
+        }
+    }
+    
+</script>-->
+<!--29.Write a program to print the product of the numbers between 1 to 10 ( initialisation of product variable with 1 )-->
+<script>
+    var s=1;
+    for(i=1;i<=10;i++){
+        s=s*i; 
+        }
+        console.log(s) 
+    
+</script>
+<!--30.Write a program to find the product of all odd numbers between 1 and 10-->
+<script>
+    var s=2;
+    for(i=1;i<=10;i++){
+        if(s%3==0){
+        
+            
+              
+            
+        }
+        console.log(i*s)
+        
+        }
+        
+         
+    
+</script>
+<!--print Number of Digits in given number.-->
+
+    </body>
+</html>
